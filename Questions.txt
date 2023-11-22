@@ -1,6 +1,20 @@
-What is the study of material wealth?
-Economics
-Horticulture
-Wealthology
-Commerce
-
+Easy | What is the study of material wealth?| Economics | Horticulture | Wealthology | Commerce | Economics
+Easy | What is the capital of France? | Madrid | Paris | Berlin | London | Paris
+Easy | Which planet is known as the "Red Planet"? | Jupiter | Venus | Mars | Saturn | Mars
+Easy | Who wrote Remeo and Juliet? | Charles Dickens | Mark Twain | William Shakespeare | Jane Austin | William Shakespeare
+Easy | What is the chemical symbol for water? | O2 | H2O | CO2 | NaCl | H2O
+Easy | Which gas do plants absorb from the atmosphere during photosynthesis? | Oxygen | Nitrogen | Carbon Dioxide | Hydrogen | Carbon Dioxide
+Easy | What is the largest mammal on Earth? | African Elephant | Blue Whale | Polar Bear | Giraffe | Blue Whale
+Medium | What is the currency of Japan? | Yen | Won | Ringgit | Rupee | Yen
+Medium | Who painted the Mona Lisa? | Vincent van Gogh | Pablo Picasso | Leonardo da Vinci | Michelangelo | Leonardo da Vinci
+Medium | In which year did the Titanic sink? | 1907 | 1912 | 1925 | 1931 | 1912
+Medium | What is the capital of Australia? | Sydney | Melbourne | Canberra | Brisbane | Canberra
+Medium | Which gas do humans exhale when they breathe? | Oxygen | Nitrogen | Carbon Dioxide | Hydrogen | Carbon Dioxide
+Medium | Who is the author of "To Kill a Mockingbird"? | Harper Lee | Mark Twain | F. Scott Fitzgerald | J.D. Salinger | Harper Lee
+Medium | What is the largest planet in our solar system? | Venus | Earth | Mars | Jupiter | 
+Hard | Which of the following elements is a noble gas and is used in neon signs? | Helium | Argon | Krypton | Xenon | Argon
+Hard | Who was the first woman to fly solo nonstop across the Atlantic Ocean? | Amelia Earhart | Bessie Coleman | Harriet Quimby | Jacqueline Cochran | Amelia Earhart
+Hard | In which country is Mount Kilimanjaro, the highest mountain in Africa, located? | Kenya | Tanzania | Uganda | Rwanda | Tanzania
+Hard | What is the chemical formula for table salt? | NaCl | H2O | CO2 | CH4 | NaCl
+Hard | Which war is known as the "War to End All Wars"? | Korean War | Vietnam War | World War I | World War II | World War I
+Hard | Who is the author of the science fiction novel "Dune"? | Isaac Asimov | Arthur C. Clarke | Philip K. Dick | Frank Herbert | Frank Herbert

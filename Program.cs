@@ -1,9 +1,31 @@
 ﻿using System;
+using System.IO;
 
 namespace QuizGame
 {
     class Program
     {
+        public static string filename = "Questions.txt";
+        public static string filePath = Path.Combine(Directory.GetCurrentDirectory(), filename);
+
+        public static void ReadQuestions()
+        {
+            try
+            {
+                StreamReader sr = new StreamReader(filePath);
+                string line = sr.ReadLine();
+                while (line != null)
+                {
+                    Console.WriteLine(line);
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+        }
 
         public static void WriteRules()
         {
@@ -64,6 +86,8 @@ namespace QuizGame
         static void Main(string[] args)
         {
             bool isRunning = true; // This flag controls the loop
+
+            ReadQuestions();
 
             Console.WriteLine("\nHello! Welcome to the Quiz Game Show.\nIf you have any questions, just ask about the rules or, if you are ready to start, just say start.\nType 'exit' to stop at any time.");
 
