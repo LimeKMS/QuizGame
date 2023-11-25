@@ -1,12 +1,15 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 
 namespace QuizGame
 {
     class Program
     {
         public static string filename = "Questions.txt";
-        public static string filePath = Path.Combine(Directory.GetCurrentDirectory(), filename);
+        public static string projectDirectory = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\"));
+        public static string filePath = Path.Combine(projectDirectory, filename);
+
 
         public static void ReadQuestions()
         {
@@ -24,6 +27,7 @@ namespace QuizGame
             catch (Exception e)
             {
                 Console.WriteLine("Exception: " + e.Message);
+                Console.WriteLine("Stack Trace: " + e.StackTrace);
             }
         }
 
