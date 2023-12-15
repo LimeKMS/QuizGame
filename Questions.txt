@@ -1,4 +1,4 @@
-Easy | What is the study of material wealth?| Economics | Horticulture | Wealthology | Commerce | Economics
+Easy | What is the study of material wealth? | Economics | Horticulture | Wealthology | Commerce | Economics
 Easy | What is the capital of France? | Madrid | Paris | Berlin | London | Paris
 Easy | Which planet is known as the "Red Planet"? | Jupiter | Venus | Mars | Saturn | Mars
 Easy | Who wrote Remeo and Juliet? | Charles Dickens | Mark Twain | William Shakespeare | Jane Austin | William Shakespeare
@@ -12,6 +12,7 @@ Medium | What is the capital of Australia? | Sydney | Melbourne | Canberra | Bri
 Medium | Which gas do humans exhale when they breathe? | Oxygen | Nitrogen | Carbon Dioxide | Hydrogen | Carbon Dioxide
 Medium | Who is the author of "To Kill a Mockingbird"? | Harper Lee | Mark Twain | F. Scott Fitzgerald | J.D. Salinger | Harper Lee
 Medium | What is the largest planet in our solar system? | Venus | Earth | Mars | Jupiter | 
+Medium | What poison is found in apples? | Thallium | Arsenic | Cyanide | Malum | Cyanide
 Hard | Which of the following elements is a noble gas and is used in neon signs? | Helium | Argon | Krypton | Xenon | Argon
 Hard | Who was the first woman to fly solo nonstop across the Atlantic Ocean? | Amelia Earhart | Bessie Coleman | Harriet Quimby | Jacqueline Cochran | Amelia Earhart
 Hard | In which country is Mount Kilimanjaro, the highest mountain in Africa, located? | Kenya | Tanzania | Uganda | Rwanda | Tanzania
