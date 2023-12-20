@@ -155,6 +155,35 @@ namespace QuizGame
             }
         }
 
+        public void delete(int position)
+        {
+            LinkedListNode current = Head;
+            LinkedListNode prev = Head;
+
+            for (int i = 1; i <= position; i++)
+            {
+                if (i == 1 && position == 1)
+                {
+                    Head = current.Next;
+                }
+                else
+                {
+                    if (i == position)
+                    {
+                        prev.Next = current.Next;
+                        Console.WriteLine("\nQuestion has been deleted!\n");
+                    }
+                    else
+                    {
+                        prev = current;
+                        current = current.Next;
+                    }
+                }
+
+            }
+
+
+        }
 
     }
 
@@ -273,6 +302,83 @@ namespace QuizGame
 
         }
 
+        public static void deleteQuestion()
+        {
+
+
+            int i = 0;
+            int input = 0;
+            Boolean valid = false;
+            LinkedListNode current = Questions.Head;
+            while (current != null)
+            {
+                i++;
+                current = current.Next;
+            }
+
+            Questions.PrintAllNodes();
+            Console.Write("\nAre you sure you want to delete a question (Y/N)?: ");
+            string userInput = Console.ReadLine();
+            while (valid == false)
+            {
+                switch (userInput)
+                {
+                    case "Y":
+                        Console.Write("\nInput the question you want deleted: ");
+                        userInput = Console.ReadLine();
+
+                        try
+                        {
+                            input = Int32.Parse(userInput);
+                        }
+                        catch
+                        {
+                            input = 0;
+                        }
+
+                        if (input >= 1 && input <= i)
+                        {
+                            Questions.delete(input);
+                            valid = true;
+                        }
+                        else
+                        {
+                            while (1 > 0)
+                            {
+                                Console.Write("\nInvalid Input!!\n\nInput the question you want deleted: ");
+                                userInput = Console.ReadLine();
+                                try
+                                {
+                                    input = Int32.Parse(userInput);
+                                }
+                                catch
+                                {
+                                    input = 0;
+                                }
+
+                                if (input >= 1 && input <= i)
+                                {
+                                    Questions.delete(input);
+                                    valid = true;
+                                    break;
+                                }
+
+                            }
+                        }
+                        break;
+                    case "N":
+                        valid = true;
+                        break;
+                    default:
+                        Console.Write("\nPlease answer properly (Y/N)?: ");
+                        userInput = Console.ReadLine();
+                        break;
+                }
+
+            }
+
+
+        }
 
         public static void AdminPage()
         {
@@ -324,11 +430,15 @@ namespace QuizGame
                         {
                             Questions.Add(add);
                             Questions.updateQuestions(filePath);
+                            Console.WriteLine("\nNew Question has been added!\n");
                         }
-                        break;
+                        goto case "0";
                     case "6":
-                        break;
+                        deleteQuestion();
+                        Questions.updateQuestions(filePath);
+                        goto case "0";
                     case "7":
+                        Console.WriteLine("\nHello! Welcome to the Quiz Game Show.\nIf you have any questions, just ask about the rules or, if you are ready to start, just say start.\nType 'exit' to stop at any time.");
                         isRunning = false;
                         break;
                     default:
@@ -337,6 +447,11 @@ namespace QuizGame
 
                 }
             }
+        }
+
+        public static void Quiz()
+        {
+
         }
 
         static void Main(string[] args)
@@ -360,6 +475,10 @@ namespace QuizGame
                 else if (userInput.ToLower().Contains("rules"))
                 {
                     WriteRules();
+                }
+                else if (userInput.ToLower().Contains("start"))
+                {
+
                 }
                 else if (userInput.Contains("Admin Mode X22"))
                 {
