@@ -1,4 +1,5 @@
 Easy | What is the study of material wealth? | Economics | Horticulture | Wealthology | Commerce | Economics
+Easy | What is the study of material wealth? | Economics | Horticulture | Wealthology | Commerce | Economics
 Easy | What is the capital of France? | Madrid | Paris | Berlin | London | Paris
 Easy | Which planet is known as the "Red Planet"? | Jupiter | Venus | Mars | Saturn | Mars
 Easy | Who wrote Remeo and Juliet? | Charles Dickens | Mark Twain | William Shakespeare | Jane Austin | William Shakespeare
@@ -7,6 +8,7 @@ Easy | Which gas do plants absorb from the atmosphere during photosynthesis? | O
 Easy | What is the largest mammal on Earth? | African Elephant | Blue Whale | Polar Bear | Giraffe | Blue Whale
 Medium | What is the currency of Japan? | Yen | Won | Ringgit | Rupee | Yen
 Medium | Who painted the Mona Lisa? | Vincent van Gogh | Pablo Picasso | Leonardo da Vinci | Michelangelo | Leonardo da Vinci
+Medium | In which year did the Titanic sink? | 1907 | 1912 | 1925 | 1931 | 1912
 Medium | In which year did the Titanic sink? | 1907 | 1912 | 1925 | 1931 | 1912
 Medium | What is the capital of Australia? | Sydney | Melbourne | Canberra | Brisbane | Canberra
 Medium | Which gas do humans exhale when they breathe? | Oxygen | Nitrogen | Carbon Dioxide | Hydrogen | Carbon Dioxide
