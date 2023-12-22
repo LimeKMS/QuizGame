@@ -648,10 +648,22 @@ namespace QuizGame
                     else
                     {
                         lives--;
-                        Console.WriteLine("\n\nIncorrect!");
+                        Console.WriteLine("\nIncorrect!\n");
                         if (lives == 1)
                             Console.WriteLine("You have 1 life left, make it count.\n");
-                        else if (lives != 0)
+                        else if (lives == 0)
+                        {
+                            String victory = points.ToString() + " Points!";
+                            Console.WriteLine();
+                            Console.WriteLine("****************************************************");
+                            Console.WriteLine("*        Im sorry, you'll get them next time!      *");
+                            Console.WriteLine("*                  You Lost....                    *");
+                            Console.WriteLine("*            You lost with " + victory.PadRight(10) + "              *");
+                            Console.WriteLine("*                                                  *");
+                            Console.WriteLine("****************************************************\n");
+                            Console.WriteLine("Play again? just say exit to if you are ready to leave.\n");
+                        }
+                        else
                             Console.WriteLine("You have " + lives + " lives remaining.\n");
                     }
                     j++;
