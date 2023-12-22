@@ -1,7 +1,7 @@
 Easy | What is the study of material wealth? | Economics | Horticulture | Wealthology | Commerce | Economics
 Easy | What is the capital of France? | Madrid | Paris | Berlin | London | Paris
 Easy | Which planet is known as the "Red Planet"? | Jupiter | Venus | Mars | Saturn | Mars
-Easy | Who wrote Remeo and Juliet? | Charles Dickens | Mark Twain | William Shakespeare | Jane Austin | William Shakespeare
+Easy | Who wrote Romeo and Juliet? | Charles Dickens | Mark Twain | William Shakespeare | Jane Austin | William Shakespeare
 Easy | What is the chemical symbol for water? | O2 | H2O | CO2 | NaCl | H2O
 Easy | Which gas do plants absorb from the atmosphere during photosynthesis? | Oxygen | Nitrogen | Carbon Dioxide | Hydrogen | Carbon Dioxide
 Easy | What is the largest mammal on Earth? | African Elephant | Blue Whale | Polar Bear | Giraffe | Blue Whale

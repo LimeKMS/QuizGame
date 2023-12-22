@@ -196,6 +196,7 @@ namespace QuizGame
         public static string filePath = Path.Combine(projectDirectory, filename);
 
         static LinkedList Questions = new LinkedList();
+        static int easy = 0, medium = 0, hard = 0;
 
 
         public static void ReadQuestions()
@@ -449,9 +450,221 @@ namespace QuizGame
             }
         }
 
+        public static LinkedListNode findNode(int position)
+        {
+            LinkedListNode Node = Questions.Head;
+
+            for (int i = 1; i <= position; i++)
+            {
+                if (i == position)
+                {
+                    return Node;
+                }
+                Node = Node.Next;
+            }
+
+            return Node;
+        }
+
+        public static Boolean isValidQuestions()
+        {
+            LinkedListNode current = Questions.Head;
+            easy = 0;
+            medium = 0;
+            hard = 0;
+            while (current != null)
+            {
+                if (current.Data[0] == "Easy")
+                {
+                    easy++;
+                }
+                else if (current.Data[0] == "Medium")
+                {
+                    medium++;
+                }
+                else if (current.Data[0] == "Hard")
+                {
+                    hard++;
+                }
+                current = current.Next;
+            }
+            if (easy >= 4 && medium >= 3 && hard >= 3)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("\nYou don't have enough questions to enter into the quiz!");
+                Console.WriteLine("You have " + easy + " easy questions, " + medium + " medium questions and " + hard + " hard questions.");
+                Console.WriteLine("You need 4 easy questions, 3 medium questions, and 3 hard questions.\n");
+                return false;
+            }
+
+        }
+
+        public static Boolean isCorrectAnswer(LinkedListNode Question, String userInput)
+        {
+            String Answer = "";
+            int i = 2;
+            for (i = 2; i <= 5; i++)
+            {
+                if (Question.Data[6] == Question.Data[i])
+                {
+                    if (i == 2)
+                        Answer = "A";
+                    if (i == 3)
+                        Answer = "B";
+                    if (i == 4)
+                        Answer = "C";
+                    if (i == 5)
+                        Answer = "D";
+                    break;
+                }
+            }
+
+            if (userInput == Answer || userInput == Question.Data[i])
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static void Quiz()
         {
+            if (isValidQuestions())
+            {
+                Random r = new Random();
+                List<int> randomList = new List<int>();
+                int x = 0, y = 0, lives = 4, j = 1, points = 0;
+                Boolean validAnswer;
+                String userInput;
+                for (int i = 0; i < 4; i++)
+                {
+                    x = r.Next(1, easy + 1);
+                    if (!randomList.Contains(x))
+                    {
+                        randomList.Add(x);
+                    }
+                    else
+                    {
+                        while (y == 0)
+                        {
+                            x = r.Next(1, easy + 1);
+                            if (!randomList.Contains(x))
+                            {
+                                y = 1;
+                                randomList.Add(x);
+                            }
+                        }
+                        y = 0;
+                    }
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                    x = r.Next(easy + 1, easy + medium + 1);
+                    if (!randomList.Contains(x))
+                    {
+                        randomList.Add(x);
+                    }
+                    else
+                    {
+                        while (y == 0)
+                        {
+                            x = r.Next(easy + 1, easy + medium + 1);
+                            if (!randomList.Contains(x))
+                            {
+                                y = 1;
+                                randomList.Add(x);
+                            }
+                        }
+                        y = 0;
+                    }
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                    x = r.Next(easy + medium + 1, easy + medium + hard + 1);
+                    if (!randomList.Contains(x))
+                    {
+                        randomList.Add(x);
+                    }
+                    else
+                    {
+                        while (y == 0)
+                        {
+                            x = r.Next(easy + medium + 1, easy + medium + hard + 1);
+                            if (!randomList.Contains(x))
+                            {
+                                y = 1;
+                                randomList.Add(x);
+                            }
+                        }
+                        y = 0;
+                    }
+                }
 
+                while (lives > 0)
+                {
+                    int current = randomList[j - 1];
+                    LinkedListNode currentQuestionNode = findNode(current);
+                    switch (j)
+                    {
+                        case 1:
+                            Console.WriteLine("\nRound 1: Easy\nQuestion " + j + ":");
+                            break;
+                        case 5:
+                            Console.WriteLine("\nRound 2: Medium\nQuestion " + j + ":");
+                            break;
+                        case 8:
+                            Console.WriteLine("\nRound 3: Hard\nQuestion " + j + ":");
+                            break;
+                        default:
+                            Console.WriteLine("\nQuestion " + j + ":");
+                            break;
+                    }
+                    Console.WriteLine(currentQuestionNode.Data[1]);
+                    Console.WriteLine("A. " + currentQuestionNode.Data[2].PadRight(32) + "C. " + currentQuestionNode.Data[4]);
+                    Console.WriteLine("B. " + currentQuestionNode.Data[3].PadRight(32) + "D. " + currentQuestionNode.Data[5]);
+                    Console.Write("\nAnswer: ");
+                    userInput = Console.ReadLine();
+
+                    if (isCorrectAnswer(currentQuestionNode, userInput))
+                    {
+                        Console.WriteLine("\n\nCorrect!\n");
+                        points++;
+                        if (j == 10)
+                        {
+                            String victory = points.ToString() + " Points!";
+                            Console.WriteLine();
+                            Console.WriteLine("****************************************************");
+                            Console.WriteLine("*                Congratulations!                  *");
+                            Console.WriteLine("*                    You Win!                      *");
+                            Console.WriteLine("*             You won with " + victory.PadRight(10) + "              *");
+                            Console.WriteLine("*                                                  *");
+                            Console.WriteLine("****************************************************\n");
+                            Console.WriteLine("Play again? just say exit to if you are ready to leave.\n");
+                        }
+
+                    }
+                    else
+                    {
+                        lives--;
+                        Console.WriteLine("\n\nIncorrect!");
+                        if (lives == 1)
+                            Console.WriteLine("You have 1 life left, make it count.\n");
+                        else if (lives != 0)
+                            Console.WriteLine("You have " + lives + " lives remaining.\n");
+                    }
+                    j++;
+                    if (j == 11)
+                    {
+                        break;
+                    }
+
+                }
+
+
+
+            }
         }
 
         static void Main(string[] args)
@@ -478,7 +691,7 @@ namespace QuizGame
                 }
                 else if (userInput.ToLower().Contains("start"))
                 {
-
+                    Quiz();
                 }
                 else if (userInput.Contains("Admin Mode X22"))
                 {
